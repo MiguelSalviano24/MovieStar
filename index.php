@@ -26,13 +26,15 @@
                 <img src="<?= $BASE_URL ?>img/users/logo.svg" alt="Moviestar" id="logo">
                 <span id="moviestar-title">Moviestar</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div>
                 <form action="" method="GET" id="search-form" class="form-inline my-2 my-lg-0">
-                    <input type="text" name="q" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar filmes" aria-label="search">
-                    <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                    <input type="text" name="q" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar filmes" aria-label="Search">
+                    <button class="btn my-2 my-sm-0" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </form>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -45,10 +47,32 @@
         </nav>
     </header>
     <main>
-        <h1><span class="fas fa-eye check-icon"></span>Testando</h1>
+        <div id="main-container" class="container-fluid">
+            <h1>Corpo do site</h1>
+        </div>
     </main>
-    <footer>
-        <!-- place footer here -->
+    <footer id="footer">
+        <div class="social-container">
+            <ul>
+                <li>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer-links-container">
+            <ul>
+                <li>Adicionar filmes</li>
+                <li>Adicionar crítica</li>
+                <li>Entrar/Registrar</li>
+            </ul>
+        </div>
+        <p>&copy; 2025 Miguel Salviano</p>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
