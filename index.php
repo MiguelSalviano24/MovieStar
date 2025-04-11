@@ -35,6 +35,13 @@
                     <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="<?= $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
