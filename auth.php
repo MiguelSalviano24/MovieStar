@@ -23,7 +23,7 @@ require_once('./templates/header.php')
                 </div>
                 <div class="col-md-4" id="login-container">
                     <h2>Criar conta</h2>
-                    <form action="" method="POST">
+                    <form action="<?= $BASE_URL ?>auth-process.php" method="POST">
                         <input type="hidden" name="type" value="register">
                         <div class="m-3 ms-0">
                             <label for="email">E-mail:</label>
@@ -42,8 +42,8 @@ require_once('./templates/header.php')
                             <input type="password" class="form-control" id="password" name="password" placeholder="Digite a sua senha">
                         </div>
                         <div class="m-3 ms-0">
-                            <label for="confirm-password">Confirme a sua senha:</label>
-                            <input type="confirm-password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirme a sua senha">
+                            <label for="confirmpassword">Confirme a sua senha:</label>
+                            <input type="confirm-password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirme a sua senha">
                         </div>
                         <input type="submit" class="btn btn-warning" value="Registrar">
                     </form>
