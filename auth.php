@@ -31,7 +31,7 @@ require_once('./templates/header.php')
                         </div>
                         <div class="m-3 ms-0">
                             <label for="name">Nome:</label>
-                            <input type="name" class="form-control" id="name" name="name" placeholder="Digite o seu nome">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Digite o seu nome">
                         </div>
                         <div class="m-3 ms-0">
                             <label for="lastname">Sobrenome:</label>
