@@ -8,6 +8,8 @@ $message = new Message($BASE_URL);
 $flassMessage = $message->getMessage();
 
 if (!empty($flassMessage['msg'])) {
+
+    $message->clearMessage();
 }
 ?>
 

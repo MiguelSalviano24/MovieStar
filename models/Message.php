@@ -34,5 +34,10 @@ class Message
         }
     }
 
-    public function clearMessage() {}
+    public function clearMessage()
+    {
+
+        $_SESSION['msg'] = '';
+        $_SESSION['type'] = '';
+    }
 }
