@@ -78,9 +78,11 @@ $userData = $userDAO->verifyToken(false);
                             <a href="<?= $BASE_URL ?>logout.php" class="nav-link">Sair</a>
                         </li>
                     <?php else: ?>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
-                        </li>
+                        <div class="login">
+                            <li class="nav-item">
+                                <a href="<?= $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
+                            </li>
+                        </div>
                     <?php endif; ?>
                 </ul>
             </div>

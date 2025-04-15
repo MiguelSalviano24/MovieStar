@@ -19,7 +19,7 @@
 }
 
 #main-navbar {
-  background-color: #000;
+    background-color: #000;
     width: 100%;
     height: 60px;
 
@@ -28,17 +28,16 @@
 .mb-3 {
     width: 70vw;
     display: flex;
-    transform: translateY(10%);
-    overflow: hidden;    
-    left: 500px;
+    transform: translateY(10%);  
+    left: 400px;
 }
 
 #search-form {
     margin: 0 auto;
     background-color: #fff;
     border-radius: 5px;
-    width: 600px;
-    margin-left: 180px;
+    width: 700px;
+    margin-left: 100px;
     transform: translateX(30%);
 }
 
@@ -50,6 +49,15 @@
 
 .navbar-nav {
     display: flex;
+    justify-content: start;
+    width: 500px;
+    margin-left: 35px;
+  
+  }
+
+  .login {
+    display: flex;
+    width: 20vw;
     justify-content: end;
     margin-left: 50px;
   }

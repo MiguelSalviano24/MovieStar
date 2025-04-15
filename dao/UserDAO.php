@@ -132,5 +132,16 @@ class UserDAO implements UserDAOInterface
             return false;
         }
     }
+
+    public function destroyToken()
+    {
+
+        // Remove o token da session
+        $_SESSION["token"] = "";
+
+        // Redirecionar e apresentar a mensagem de sucesso
+        $this->message->setMessage("Você fez o logout com sucesso!", "success", "index.php");
+    }
+
     public function changePassword(User $user) {}
 }
