@@ -6,6 +6,7 @@ require_once('globals.php');
 require_once('db.php');
 
 $message = new Message($BASE_URL);
+$userDAO = new UserDAO($conn, $BASE_URL);
 
 
 // Resgate o tipo de formulário
@@ -23,6 +24,10 @@ if ($type === 'register') {
     if ($name && $lastname && $email && $password) {
 
         if ($password === $confirmpassword) {
+            if ($userDAO->findByEmail($email) === false) {
+            } else {
+                $message->setMessage("Usuário já cadastrado.", "error", "back");
+            }
         } else {
             $message->setMessage("As senhas não coincidem", "error", "back");
         }
