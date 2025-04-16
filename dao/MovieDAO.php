@@ -26,7 +26,7 @@ class MovieDAO implements MovieDAOInterface
         $movie->id = $data["id"];
         $movie->title = $data["title"];
         $movie->description = $data["description"];
-        $movie->image = $data["image"];
+        $movie->img = $data["img"];
         $movie->trailer = $data["trailer"];
         $movie->category = $data["category"];
         $movie->duration = $data["duration"];
@@ -162,12 +162,12 @@ class MovieDAO implements MovieDAOInterface
         $stmt = $this->conn->prepare("INSERT INTO movies (
         title, description, img, trailer, category, duration, users_id
       ) VALUES (
-        :title, :description, :image, :trailer, :category, :duration, :users_id
+        :title, :description, :img, :trailer, :category, :duration, :users_id
       )");
 
         $stmt->bindParam(":title", $movie->title);
         $stmt->bindParam(":description", $movie->description);
-        $stmt->bindParam(":image", $movie->image);
+        $stmt->bindParam(":img", $movie->img);
         $stmt->bindParam(":trailer", $movie->trailer);
         $stmt->bindParam(":category", $movie->category);
         $stmt->bindParam(":duration", $movie->duration);
@@ -185,7 +185,7 @@ class MovieDAO implements MovieDAOInterface
         $stmt = $this->conn->prepare("UPDATE movies SET
         title = :title,
         description = :description,
-        image = :image,
+        img = :img,
         category = :category,
         trailer = :trailer,
         duration = :duration
@@ -194,7 +194,7 @@ class MovieDAO implements MovieDAOInterface
 
         $stmt->bindParam(":title", $movie->title);
         $stmt->bindParam(":description", $movie->description);
-        $stmt->bindParam(":image", $movie->image);
+        $stmt->bindParam(":img", $movie->img);
         $stmt->bindParam(":category", $movie->category);
         $stmt->bindParam(":trailer", $movie->trailer);
         $stmt->bindParam(":duration", $movie->duration);
