@@ -6,11 +6,12 @@ class Movie
     public $id;
     public $title;
     public $description;
-    public $image;
+    public $img;
     public $trailer;
     public $category;
     public $duration;
     public $users_id;
+    public $rating;
 
     public function imageGenerateName()
     {
