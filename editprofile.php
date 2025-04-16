@@ -22,7 +22,7 @@ if ($userData->img == "") {
             <form action="<?= $BASE_URL ?>user-process.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="type" value="update">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-4">
                         <h1><?= $fullName ?></h1>
                         <p class="page-description">Altere seus dados no formulário abaixo:</p>
                         <div class="m-3 ms-0">
@@ -39,11 +39,11 @@ if ($userData->img == "") {
                         </div>
                         <input type="submit" class="btn card-btn" value="Alterar">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-4">
                         <div id="profile-image-container" style="background-image: url('<?= $BASE_URL ?>img/users/<?= $userData->img ?>')"></div>
                         <div class="m-3 ms-0">
                             <label for="image">Foto:</label>
-                            <input type="file" class="form-control-file" name="image">
+                            <input type="file" class="form-control" name="image">
                         </div>
                         <div class="m-3 ms-0">
                             <label for="bio">Sobre você:</label>
@@ -53,7 +53,7 @@ if ($userData->img == "") {
                 </div>
             </form>
             <div class="row" id="change-password-container">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <h2>Alterar a senha:</h2>
                     <p class="page-description">Digite a nova senha e confirme, para alterar sua senha:</p>
                     <form action="<?= $BASE_URL ?>user_process.php" method="POST">
