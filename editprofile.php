@@ -1,5 +1,10 @@
 <?php
-require_once('templates/header.php')
+require_once('templates/header.php');
+require_once('dao/UserDAO.php');
+
+$userDAO = new UserDAO($conn, $BASE_URL);
+
+$userData = $userDAO->verifyToken(true);
 ?>
 
 <main>

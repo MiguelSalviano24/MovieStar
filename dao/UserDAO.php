@@ -54,7 +54,35 @@ class UserDAO implements UserDAOInterface
             $this->setTokenToSession($user->token);
         }
     }
-    public function update(User $user) {}
+    public function update(User $user, $redirect = true)
+    {
+
+        $stmt = $this->conn->prepare("UPDATE users SET
+        name = :name,
+        lastname = :lastname,
+        email = :email,
+        img = :img,
+        bio = :bio,
+        token = :token
+        WHERE id = :id
+      ");
+
+        $stmt->bindParam(":name", $user->name);
+        $stmt->bindParam(":lastname", $user->lastname);
+        $stmt->bindParam(":email", $user->email);
+        $stmt->bindParam(":img", $user->img);
+        $stmt->bindParam(":bio", $user->bio);
+        $stmt->bindParam(":token", $user->token);
+        $stmt->bindParam(":id", $user->id);
+
+        $stmt->execute();
+
+        if ($redirect) {
+
+            // Redireciona para o perfil do usuario
+            $this->message->setMessage("Dados atualizados com sucesso!", "success", "editprofile.php");
+        }
+    }
     public function verifyToken($protected = false)
     {
         if (!empty($_SESSION['token'])) {
@@ -64,10 +92,10 @@ class UserDAO implements UserDAOInterface
             if ($user) {
                 return $user;
             } else if ($protected) {
-                $this->message->setMessage("Faça a autenticação para acessar essa página", "error", "index.php");
+                $this->message->setMessage("Faça a autenticação para acessar essa página.", "error", "index.php");
             }
         } else if ($protected) {
-            $this->message->setMessage("Faça a autenticação para acessar essa página", "error", "index.php");
+            $this->message->setMessage("Faça a autenticação para acessar essa página.", "error", "index.php");
         }
 
         return false;
@@ -85,7 +113,30 @@ class UserDAO implements UserDAOInterface
             $this->message->setMessage("Seja bem-vindo!", "success", "editprofile.php");
         }
     }
-    public function autenticateUser($email, $password) {}
+    public function autenticateUser($email, $password)
+    {
+
+        $user = $this->findByEmail($email);
+
+        if ($user) {
+            if (password_verify($password, $user->password)) {
+
+                $token = $user->generateToken();
+
+                $this->setTokenToSession($token, false);
+
+                $user->token = $token;
+
+                $this->update($user, false);
+
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
     public function findByEmail($email)
     {
         if ($email != '') {
