@@ -4,13 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-#main-container {
-    background-color: #000;
-    color: #FFF;
-    min-height: 65vh;
-    padding: 40px;
-  }
-
 .bold {
     font-weight: bold;
 }
