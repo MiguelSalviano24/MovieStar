@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 require_once("globals.php");
 require_once("db.php");
 require_once("models/Movie.php");
@@ -64,7 +60,7 @@ if ($type === "create") {
 
                 imagejpeg($imageFile, "./img/movies/" . $imageName, 100);
 
-                $movie->image = $imageName;
+                $movie->img = $imageName;
             } else {
 
                 $message->setMessage("Tipo inválido de imagem, insira png ou jpg!", "error", "back");
@@ -149,7 +145,7 @@ if ($type === "create") {
 
                         imagejpeg($imageFile, "./img/movies/" . $imageName, 100);
 
-                        $movieData->image = $imageName;
+                        $movieData->img = $imageName;
                     } else {
 
                         $message->setMessage("Tipo inválido de imagem, insira png ou jpg!", "error", "back");
