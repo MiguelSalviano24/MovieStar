@@ -93,6 +93,7 @@ if ($type === "update") {
         $finalPassword = $user->generatePassword($password);
 
         $user->password = $finalPassword;
+
         $user->id = $id;
 
         $userDAO->changePassword($user);

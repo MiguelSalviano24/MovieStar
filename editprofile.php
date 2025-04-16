@@ -56,7 +56,7 @@ if ($userData->img == "") {
                 <div class="col-md-4 mb-4">
                     <h2>Alterar a senha:</h2>
                     <p class="page-description">Digite a nova senha e confirme, para alterar sua senha:</p>
-                    <form action="<?= $BASE_URL ?>user_process.php" method="POST">
+                    <form action="<?= $BASE_URL ?>user-process.php" method="POST">
                         <input type="hidden" name="type" value="changepassword">
                         <div class="m-3 ms-0">
                             <label for="password">Senha:</label>
