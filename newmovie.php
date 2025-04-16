@@ -22,8 +22,8 @@ $userData = $userDAO->verifyToken(true);
                 <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título do seu filme">
             </div>
             <div class="m-3 ms-0">
-                <label for="length">Duração:</label>
-                <input type="text" class="form-control" id="length" name="length" placeholder="Digite a duração do filme">
+                <label for="duration">Duração:</label>
+                <input type="text" class="form-control" id="duration" name="duration" placeholder="Digite a duração do filme">
             </div>
             <div class="m-3 ms-0">
                 <label for="category">Categoria:</label>
