@@ -29,6 +29,10 @@ Ideal para estudos e prática com PHP puro, MySQL e Bootstrap 5, este projeto si
     <br>
   <img width="1440" alt="Captura de Tela 2025-04-17 às 12 23 56" src="https://github.com/user-attachments/assets/18ef4b30-8363-41f7-a836-655b22f3c84f" />
   <br>
+- **Adicionar filmes ao catálogo**
+  - Adiciona filmes com sua descrição, categoria, duração e crítica ao filme.
+    <p></p>
+    <img width="556" alt="Captura de Tela 2025-04-17 às 12 25 21" src="https://github.com/user-attachments/assets/13f51815-fe21-45a0-a6b6-bf9fd65114b1" />
 
 - **Dashboard do Usuário**  
   - Visualização dos filmes salvos/avaliados.  
