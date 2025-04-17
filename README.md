@@ -2,7 +2,11 @@
 
 <img width="1440" alt="Captura de Tela 2025-04-17 às 12 23 41" src="https://github.com/user-attachments/assets/86d01c0e-952d-4dec-8ef7-2e5be95ec5ff" />
 
-Este é um sistema web simples para cadastro, login e avaliação de filmes, desenvolvido com **PHP puro**, **MySQL** e **Bootstrap 5**.
+## 📖 Descrição do Projeto
+
+MovieStar é um sistema web completo para avaliação de filmes, permitindo que usuários descubram, avaliem e gerenciem seus filmes favoritos. Com uma interface moderna e responsiva, o projeto oferece funcionalidades essenciais como cadastro e login com autenticação, busca de filmes, painel de usuário com avaliações salvas e edição de perfil.
+
+Ideal para estudos e prática com PHP puro, MySQL e Bootstrap 5, este projeto simula uma aplicação real de catálogo de filmes com interação entre usuários e banco de dados.
 
 ## 📌 Funcionalidades
 
